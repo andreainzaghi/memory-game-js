@@ -30,7 +30,7 @@ const circle2 = document.querySelector('.panel__two');
 const circle3 = document.querySelector('.panel__three');
 const container = document.querySelector('.container');
 const box = Array.from(document.querySelectorAll('.box'));
-const audio = new Audio('https://loudlinks.rocks/sounds/mp3/magic.mp3');
+// const audio = new Audio('https://loudlinks.rocks/sounds/mp3/magic.mp3');
 
 let correct_flips = 0;
 let last_flipped = [];
@@ -101,7 +101,7 @@ function startWatching(seconds, minutes) {
 		if (correct_flips >= 9) {
 			audio.play();
 			clearInterval(timer_observer);
-			gameWonParty(moves);
+			// gameWonParty(moves);
 			return;
 		}
 	
@@ -130,10 +130,10 @@ function startGame() {
 	startWatching(seconds, minutes);
 }
 
-function gameWonParty(moves) {
-	audio.play();
+// function gameWonParty(moves) {
+// 	audio.play();
 	
-}
+// }
 
 box.forEach(el => el.addEventListener('click', flipOnClick));
 
