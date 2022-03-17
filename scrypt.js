@@ -20,6 +20,7 @@ const cards = {
 	box17: 'box18',
 	box18: 'box17'
 };
+// console.log(cards.box1)
 
 //CARBON == MAIN PANEL !
 const carbon = document.querySelector('.carbon');
@@ -31,7 +32,7 @@ const circle3 = document.querySelector('.panel__three');
 const container = document.querySelector('.container');
 const box = Array.from(document.querySelectorAll('.box'));
 // const audio = new Audio('https://loudlinks.rocks/sounds/mp3/magic.mp3');
-
+console.log(box)
 let correct_flips = 0;
 let last_flipped = [];
 let moves = 0;
@@ -58,6 +59,7 @@ function compareFlipped(array) {
 		array.forEach(el => el.classList.remove('flipped'));
 		last_flipped = [];
 	}
+
 	if (array.length == 2) {
 		const card1 = array[0].classList[1];
 		const card2 = array[1].classList[1];
@@ -99,7 +101,7 @@ function startWatching(seconds, minutes) {
 		minutes_str = minutes > 9 ? `${minutes}` : `0${minutes}`;
 		time.innerHTML = `${minutes_str}:${seconds_str}`;
 		if (correct_flips >= 9) {
-			audio.play();
+			// audio.play();
 			clearInterval(timer_observer);
 			// gameWonParty(moves);
 			return;
