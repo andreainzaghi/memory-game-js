@@ -1,5 +1,3 @@
-
-
 const cards = {
 	box1: 'box2',
 	box2: 'box1',
@@ -109,7 +107,6 @@ function startWatching(seconds, minutes) {
 	
 	}, 1000);
 }
-
 
 // cliccking
 function startGame() {
